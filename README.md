@@ -3,7 +3,7 @@
 This playbook will download and install the latest versions of ChromeDriver and Google Chrome browser used for headless acceptance testing in Ubuntu 16.04 LTS.
 
 ## Codeception Acceptance testing with Chrome headless
-1. Configure `acceptance.suite.yml`
+1. Change the `acceptance.suite.yml` in your tests directory, put everything below in the `Webdriver` part und change the url.
   
         WebDriver:
             url: 'http://ecample.com/'
@@ -22,17 +22,16 @@ This playbook will download and install the latest versions of ChromeDriver and 
 
 ## Acceptance test issues with Chrome
 
-- Sometimes the element cannot be clicked because it is not inside the viewport.  
-   You have to scroll to the element first, then click the element.
+- If an element cannot be clicked because it is outside the viewport, you have to scroll to the element first, then click the element.
 ```
    $I->scrollTo('button.outside-viewport');
    $I->click(['css' => 'button.outside-viewport']);;
 ```
-- Date inputs fail with the `fillField` action, use the `pressKey` action instead.
+- Date input fields fail with the `fillField` action, use the `pressKey` action instead.
 ```
     # doesn't work  
-    $I->fillField('#date', '2017-08-31);  
+    $I->fillField('input#date', '2017-08-31);  
     
     # use this instead  
-    $I->pressKey('#date', '2017-08-31);  
+    $I->pressKey('input#date', '2017-08-31);  
 ```
