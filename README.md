@@ -1,4 +1,4 @@
-# Ansible playbook for headless Chrome and ChromeDriver in Ubuntu 16.04 LTS
+# Ansible playbook for headless Chrome and ChromeDriver  
 
 This playbook will download and install the latest version of Chrome and ChromeDriver.  
 
