@@ -1,25 +1,26 @@
 # Ansible playbook for headless Chrome and ChromeDriver in Ubuntu 16.04 LTS
 
-This playbook will download and install the latest version of Chrome and ChromeDriver in Ubuntu 16.04 LTS.  
+This playbook will download and install the latest version of Chrome and ChromeDriver.  
 
-The latest version of ChromeDriver allows you to run Chrome browser in headless mode without Selenium and doesn't need any Display server or Xvfb. 
+The latest version of ChromeDriver allows you to run Chrome browser in headless mode without Selenium and doesn't need any Display server or Xvfb.  
 
-##  How to install this playbook
+##  Install Chrome and ChromeDriver with this playbook  
 
-1. Clone this repo with git 
+1. Clone this repo with git  
 
 ```
     $ git clone https://github.com/marvin-neumann/ansible-chrome-headless.git
 ```
 
-2. Then run the playbook with ansible-playbook
+2. Then run the playbook with ansible-playbook  
 
 ```
     $ ansible-playbook -l localhost ansible-chrome-headless/playbook.yml --ask-sudo-pass
 ```
 
-## Codeception Acceptance testing with Chrome headless
-1. Change the `acceptance.suite.yml` in your tests directory, put everything below in the `Webdriver` part und change the url.
+## Codeception Acceptance testing with Chrome headless  
+
+1. Change the `acceptance.suite.yml` in your tests directory, put everything below in the `Webdriver` part und change the url.  
 
 ```
         WebDriver:
@@ -41,9 +42,9 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 
 3. Then run your tests.  
 
-## Acceptance test issues with Chrome
+## Acceptance test issues with Chrome  
 
-- If an element cannot be clicked because it is outside the viewport, you have to scroll to the element first, then click the element.
+- If an element cannot be clicked because it is outside the viewport, you have to scroll to the element first, then click the element.  
 
 ```
     $I->scrollTo('button.outside-viewport');
@@ -53,7 +54,7 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 - Date input fields fail with the `fillField` action, use the `pressKey` action instead.
 
 ```
-    # doesn't work  
+    # if this doesn't work  
     $I->fillField('input#date', '2017-08-31);  
     
     # use this instead  
