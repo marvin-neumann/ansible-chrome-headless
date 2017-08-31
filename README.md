@@ -1,9 +1,6 @@
-# Ansible playbook for ChromeDriver and Chrome
+# Ansible playbook for ChromeDriver and Chrome in Ubuntu 16.04 LTS
 
-This playbook will download and install the latest 
-versions of ChromeDriver and Google Chrome browser.
-
-This is all you need to run Chrome in headless mode for acceptance testing.
+This playbook will download and install the latest versions of ChromeDriver and Google Chrome browser used for headless acceptance testing in Ubuntu 16.04 LTS.
 
 ## Codeception Acceptance testing with Chrome headless
 1. Configure `acceptance.suite.yml`

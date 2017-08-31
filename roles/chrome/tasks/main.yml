@@ -18,5 +18,3 @@
   apt: pkg={{ item }} state=latest
   with_items:
     - google-chrome-stable
-    - libnss3
-    - libgconf-2-4

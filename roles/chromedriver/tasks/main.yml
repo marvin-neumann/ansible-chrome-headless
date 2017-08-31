@@ -3,7 +3,7 @@
   become: yes
   apt: update_cache=yes
 
-- name: install dependencies
+- name: install chromedriver dependencies
   become: yes
   apt: pkg={{ item }} state=latest
   with_items:
