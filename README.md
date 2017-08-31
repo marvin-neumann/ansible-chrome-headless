@@ -4,7 +4,8 @@ This playbook will download and install the latest versions of ChromeDriver and 
 
 ## Codeception Acceptance testing with Chrome headless
 1. Change the `acceptance.suite.yml` in your tests directory, put everything below in the `Webdriver` part und change the url.
-  
+
+```
         WebDriver:
             url: 'http://ecample.com/'
             browser: chrome
@@ -14,9 +15,9 @@ This playbook will download and install the latest versions of ChromeDriver and 
                 chromeOptions:
                     args: ["--headless", "--disable-gpu", "window-size=1920x1080"]
                     binary: "/usr/bin/google-chrome"
+```
 
-2. Start ChromeDriver    
-I placed chromedriver in /usr/bin so you can call it from anywhere  
+2. Start ChromeDriver, the binary is placed in /usr/bin so you can call it from anywhere  
 
 ```
     $ chromedriver --url-base=/wd/hub --whitelisted-ips='' --verbose
