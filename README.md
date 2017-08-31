@@ -15,19 +15,26 @@ This playbook will download and install the latest versions of ChromeDriver and 
                     args: ["--headless", "--disable-gpu", "window-size=1920x1080"]
                     binary: "/usr/bin/google-chrome"
 
-2. Start ChromeDriver  
-`$ chromedriver --url-base=/wd/hub --whitelisted-ips='' --verbose`
+2. Start ChromeDriver    
+I placed chromedriver in /usr/bin so you can call it from anywhere  
+
+```
+    $ chromedriver --url-base=/wd/hub --whitelisted-ips='' --verbose
+```
 
 3. Then run your tests.  
 
 ## Acceptance test issues with Chrome
 
 - If an element cannot be clicked because it is outside the viewport, you have to scroll to the element first, then click the element.
+
 ```
-   $I->scrollTo('button.outside-viewport');
-   $I->click(['css' => 'button.outside-viewport']);;
+    $I->scrollTo('button.outside-viewport');
+    $I->click(['css' => 'button.outside-viewport']);;
 ```
+
 - Date input fields fail with the `fillField` action, use the `pressKey` action instead.
+
 ```
     # doesn't work  
     $I->fillField('input#date', '2017-08-31);  
