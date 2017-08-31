@@ -1,5 +1,5 @@
 ---
-- name: Installs ChromeDriver and Google Chrome
+- name: Install ChromeDriver and Google Chrome
   hosts: all
   become: true
   roles:
