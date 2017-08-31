@@ -4,8 +4,6 @@ This playbook will download and install the latest version of Chrome and ChromeD
 
 The latest version of ChromeDriver allows you to run Chrome browser in headless mode without Selenium and doesn't need any Display server or Xvfb.  
 
-##  Install Chrome and ChromeDriver with this playbook  
-
 1. Clone this repo with git  
 
 ```
