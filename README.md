@@ -1,6 +1,8 @@
-# Ansible playbook for ChromeDriver and Chrome in Ubuntu 16.04 LTS
+# Ansible playbook for headless Chrome and ChromeDriver in Ubuntu 16.04 LTS
 
-This playbook will download and install the latest versions of ChromeDriver and Google Chrome browser used for headless acceptance testing in Ubuntu 16.04 LTS.
+This playbook will download and install the latest versions of Google Chrome and Google ChromeDriver used for headless acceptance testing in Ubuntu 16.04 LTS.  
+
+The latest version of ChromeDriver allows you to run Chrome browser in headless mode without any Display server or Xvfb.  
 
 ##  How to install this playbook
 
