@@ -1,3 +1,18 @@
 ---
-- name: Download latest Chromedriver
- 
+- name: update apt
+  become: yes
+  apt: update_cache=yes
+
+- name: install dependencies
+  become: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - libnss3
+    - libgconf-2-4
+
+- name: download chromedriver
+  become: yes
+  unarchive:
+    src: https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip
+    dest: /usr/bin
+    remote_src: yes

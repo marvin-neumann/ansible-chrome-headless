@@ -1,0 +1,7 @@
+---
+- name: Installs ChromeDriver and Google Chrome
+  hosts: all
+  become: true
+  roles:
+    - chrmedriver
+    - chrome
