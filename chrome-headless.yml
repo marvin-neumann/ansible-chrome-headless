@@ -1,7 +1,0 @@
----
-- name: Install Chromedriver and Chrome
-  hosts: all
-
-  roles:
-    - chromedriver
-    - chrome
