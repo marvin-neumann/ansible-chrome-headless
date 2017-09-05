@@ -10,7 +10,7 @@
     - libnss3
     - libgconf-2-4
 
-- name: install chromedriver dependencies
+- name: get chromedriver latest version number
   uri:
     url: "{{ get_version_url }}"
     return_content: yes
