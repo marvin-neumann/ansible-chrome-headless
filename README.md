@@ -50,7 +50,7 @@ Even though you are writing valid tests, there are a few problems that can occur
     $I->click(['css' => 'button.outside-viewport']);;
 ```
 
-- Date input fields fail with the `fillField` action, use the `pressKey` action instead.
+- Filling a date input field fail with the `fillField` action, use the `pressKey` action instead.
 
 ```
     # if this doesn't work  
