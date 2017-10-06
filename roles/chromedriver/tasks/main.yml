@@ -12,7 +12,7 @@
 
 - name: get chromedriver latest version number
   uri:
-    url: "{{ get_version_url }}"
+    url: "{{ chromedriver_version_url }}"
     return_content: yes
     headers:
       Content-Type: "text/plain"
