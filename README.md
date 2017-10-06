@@ -40,7 +40,8 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 
 3. Then run your tests.  
 
-## Acceptance test issues with Chrome  
+## Acceptance test issues with ChromeDriver v2.31  
+Even though you are writing valid tests, there are a few problems that can occur when running some versions of ChromeDriver.  
 
 - If an element cannot be clicked because it is outside the viewport, you have to scroll to the element first, then click the element.  
 
@@ -54,7 +55,7 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 ```
     # if this doesn't work  
     $I->fillField('input#date', '2017-08-31);  
-    
+
     # use this instead  
     $I->pressKey('input#date', '2017-08-31);  
 ```
