@@ -32,7 +32,7 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
                     binary: "/usr/bin/google-chrome"
 ```
 
-2. Start ChromeDriver, the binary is placed in /usr/bin so you can call it from anywhere  
+2. Start ChromeDriver, the binary is placed in ``/usr/local/bin`` so you can call it from anywhere  
 
 ```
     $ chromedriver --url-base=/wd/hub --whitelisted-ips='' --verbose
