@@ -6,13 +6,13 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 
 1. Clone this repo with git  
 
-```
+```bash
     $ git clone https://github.com/marvin-neumann/ansible-chrome-headless.git
 ```
 
 2. Then run the playbook with ansible-playbook  
 
-```
+```bash
     $ ansible-playbook -l localhost ansible-chrome-headless/playbook.yml --ask-sudo-pass
 ```
 
@@ -20,9 +20,9 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 
 1. Change the `acceptance.suite.yml` in your tests directory, put everything below in the `Webdriver` part und change the url.  
 
-```
+```yaml
         WebDriver:
-            url: 'http://ecample.com/'
+            url: 'http://example.com/'
             browser: chrome
             port: 9515
             window_size: false
@@ -34,7 +34,7 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 
 2. Start ChromeDriver, the binary is placed in `/usr/local/bin` so you can call it from anywhere  
 
-```
+```bash
     $ chromedriver --url-base=/wd/hub --whitelisted-ips='' --verbose
 ```
 
@@ -45,14 +45,14 @@ Even though you are writing valid tests, there are a few problems that can occur
 
 - If an element cannot be clicked because it is outside the viewport, you have to scroll to the element first, then click the element.  
 
-```
+```php
     $I->scrollTo('button.outside-viewport');
     $I->click(['css' => 'button.outside-viewport']);;
 ```
 
 - If filling a date input field with the `fillField` action doesn't work, use the `pressKey` action instead.
 
-```
+```php
     # if this doesn't work  
     $I->fillField('input#date', '2017-08-31);  
 
