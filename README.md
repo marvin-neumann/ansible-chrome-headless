@@ -6,13 +6,13 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 
 1. Clone this repo with git  
 
-```bash
+```shell
     $ git clone https://github.com/marvin-neumann/ansible-chrome-headless.git
 ```
 
 2. Then run the playbook with ansible-playbook  
 
-```bash
+```shell
     $ ansible-playbook -l localhost ansible-chrome-headless/playbook.yml --ask-sudo-pass
 ```
 
@@ -34,7 +34,7 @@ The latest version of ChromeDriver allows you to run Chrome browser in headless 
 
 2. Start ChromeDriver, the binary is placed in `/usr/local/bin` so you can call it from anywhere  
 
-```bash
+```shell
     $ chromedriver --url-base=/wd/hub --whitelisted-ips='' --verbose
 ```
 
@@ -55,7 +55,9 @@ Even though you are writing valid tests, there are a few problems that can occur
 ```php
     # if this doesn't work  
     $I->fillField('input#date', '2017-08-31);  
+```
 
+```php
     # use this instead  
     $I->pressKey('input#date', '2017-08-31);  
 ```
