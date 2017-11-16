@@ -1,8 +1,16 @@
-# Ansible playbook for headless Chrome and ChromeDriver  
+# Ansible playbook for headless Chrome with ChromeDriver  
 
 This playbook will download and install the latest version of Chrome and ChromeDriver.  
 
-The latest version of ChromeDriver allows you to run Chrome browser in headless mode without Selenium and doesn't need any Display server or Xvfb.  
+The latest version of ChromeDriver allows you to run Chrome browser in headless mode without Selenium and doesn't need any Display server or Xvfb.
+
+## Requirements
+
+- git
+- ansible
+- codeception _(for tests)_
+
+## Setup
 
 1. Clone this repo with git  
 
