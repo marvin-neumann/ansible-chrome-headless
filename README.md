@@ -62,10 +62,10 @@ Even though you are writing valid tests, there are a few problems that can occur
 
 ```php
     # if this doesn't work  
-    $I->fillField('input#date', '2017-08-31);  
+    $I->fillField('input#date', '2017-08-31');  
 ```
 
 ```php
     # use this instead  
-    $I->pressKey('input#date', '2017-08-31);  
+    $I->pressKey('input#date', '2017-08-31');  
 ```
